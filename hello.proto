@@ -1,0 +1,16 @@
+syntax = "proto3";
+package pb;
+
+option go_package = "github.com/Zavr22/py-grpc-go/pb";
+
+message HelloRequest{
+  string Message = 1;
+}
+
+message HelloResponse{
+  string MessageR = 1;
+}
+
+service Hello {
+  rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
